@@ -7,20 +7,20 @@ namespace Example {
     public class TupleExample {
 
         [Fact]
-        public void TupleTest() {
+        public void CreateTuple() {
             var ab = Tuple("a", "a");
             Assert.Equal(ab.Item1, ab.Item2);
         }
 
         [Fact]
-        public void MapTupleTest() {
+        public void MapTuple() {
             var name = Tuple("Paul", "Louth");
             var rs = name.Map((f, l) => $"{f} {l}");
             Assert.Equal(rs, "Paul Louth");
         }
 
         [Fact]
-        public void MapTupleWithMapFunctionTest() {
+        public void MapTupleWithMapFunction() {
             var name = Tuple("Paul", "Louth");
             var rs = map(name, (f, l) => $"{f} {l}");
             Assert.Equal(rs, "Paul Louth");

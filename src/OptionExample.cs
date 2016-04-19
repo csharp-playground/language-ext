@@ -30,6 +30,7 @@ public class OptionExample
         Assert.Equal(rs, 0);
     }
 
+    [Fact]
     public void IfNone2() {
         Assert.Equal(100, Optional<int>(null).IfNone(() => 100));
     }

@@ -44,23 +44,35 @@ dotnet run
 
 ```csharp
 [Fact]
-public void TupleTest() {
-    var ab = Tuple("a", "a");
-    Assert.Equal(ab.Item1, ab.Item2);
+public void CreateOption() {
+    var optional = Some(123);
+    Assert.True(optional.IsSome);
 }
 
 [Fact]
-public void MapTupleTest() {
-    var name = Tuple("Paul", "Louth");
-    var rs = name.Map((f, l) => $"{f} {l}");
-    Assert.Equal(rs, "Paul Louth");
+public void MatchOption() {
+    var optional = Some(123);
+    var x = match(optional, Some: v => v * 2, None: () => 0);
+    Assert.Equal(246, x);
 }
 
 [Fact]
-public void MapTupleWithMapFunctionTest() {
-    var name = Tuple("Paul", "Louth");
-    var rs = map(name, (f, l) => $"{f} {l}");
-    Assert.Equal(rs, "Paul Louth");
+public void MatchWithFluentApi() {
+    var optional = Some(123);
+    var rs = optional.Some(x => x * 2).None(() => 0);
+    Assert.Equal(246, rs);
+}
+
+[Fact]
+public void IfNone() {
+    var opt = Optional<int>(0);
+    var rs = opt.IfNone(() => 100);
+    Assert.Equal(rs, 0);
+}
+
+[Fact]
+public void IfNone2() {
+    Assert.Equal(100, Optional<int>(null).IfNone(() => 100));
 }
 ```
 
