@@ -4,7 +4,7 @@ namespace Example {
     using static LanguageExt.Prelude;
     using Xunit;
 
-    public class LanguageExtExample {
+    public class TupleExample {
 
         [Fact]
         public void TupleTest() {
