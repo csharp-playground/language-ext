@@ -1,3 +1,13 @@
+- [x] Tuple
+- [x] Option
+- [ ] Fun
+- [ ] Void
+- [ ] Immutable
+- [ ] Match
+- [ ] Map
+- [ ] Parse
+- [ ] Concurrency
+
 ## สร้างโปรเจคด้วย .net cli
 
 ```bash
