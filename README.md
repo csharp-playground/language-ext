@@ -1,6 +1,6 @@
 ## สร้างโปรเจคด้วย .net cli
 
-```
+```bash
 dotnet new
 dotnet restore
 dotnet run
@@ -8,7 +8,7 @@ dotnet run
 
 ## สร้างไฟล์ project.json
 
-```
+```json
 {
     "version": "1.0.0-*",
     "compilationOptions": {
@@ -32,7 +32,7 @@ dotnet run
 
 ## ตัวอย่างการใช้ LanguageExt
 
-```
+```csharp
 [Fact]
 public void TupleTest() {
     var ab = Tuple("a", "a");
@@ -58,12 +58,12 @@ public void MapTupleWithMapFunctionTest() {
 
 - ยังไม่สามารถ test ด้วยคำสั่ง `dotnet test` ใช้ `dnx test` แทน
 
-```
+```bash
 dnu restore
 dnx test
 ```
 
-```
+```bash
 $ dnx test
 xUnit.net DNX Runner (32-bit DNX 4.5.1)
   Discovering: csharp-language-ext

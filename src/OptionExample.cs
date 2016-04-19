@@ -22,4 +22,15 @@ public class OptionExample
         var rs = optional.Some(x => x * 2).None(() => 0);
         Assert.Equal(246, rs);
     }
+
+    [Fact]
+    public void IfNone() {
+        var opt = Optional<int>(0);
+        var rs = opt.IfNone(() => 100);
+        Assert.Equal(rs, 0);
+    }
+
+    public void IfNone2() {
+        Assert.Equal(100, Optional<int>(null).IfNone(() => 100));
+    }
 }
