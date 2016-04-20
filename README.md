@@ -1,8 +1,8 @@
 - [x] Tuple
 - [x] Option
-- [ ] Fun
-- [ ] Void
-- [ ] Immutable
+- [x] fun expr act
+- [x] Void
+- [x] Immutable
 - [ ] Match
 - [ ] Map
 - [ ] Parse
