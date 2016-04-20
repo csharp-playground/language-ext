@@ -8,7 +8,7 @@
 - [ ] Parse
 - [ ] Concurrency
 
-## สร้างโปรเจคด้วย .net cli
+## สร้างโปรเจคด้วย .NET CLI
 
 ```bash
 dotnet new
