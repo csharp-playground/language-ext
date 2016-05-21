@@ -7,6 +7,7 @@
 - [ ] Map
 - [ ] Parse
 - [ ] Concurrency
+- [x] Units of measure
 
 ## สร้างโปรเจคด้วย .NET CLI
 
